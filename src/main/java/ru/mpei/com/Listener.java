@@ -14,8 +14,8 @@ public class Listener implements SerialPortEventListener {
     public void serialEvent(SerialPortEvent serialPortEvent) {
         if (serialPortEvent.isRXCHAR() && serialPortEvent.getEventValue() > 0) { /*Если происходит событие установленной маски и количество байтов в буфере более 0*/
             try {
-                String data = serialPort.readString(serialPortEvent.getEventValue()); /*Создаем строковую переменную  data, куда и сохраняем данные*/
-                System.out.print(data);/*Выводим данные на консоль*/
+                String data = serialPort.readString(serialPortEvent.getEventValue());
+                System.out.print(data);
                 publishSample.Publish(data);
             } catch (SerialPortException ex) {
                 System.out.println(ex);

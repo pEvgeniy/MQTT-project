@@ -10,10 +10,10 @@ public class PublishSample {
 
     public void Publish(String data) {
 
-        String broker = "tcp://broker.emqx.io:1883";
+        String broker = "192.168.1.124:1883";
         String topic = "mqtt/test";
-        String username = "emqx";
-        String password = "public";
+        String username = "";
+        String password = "";
         String clientid = "publish_client";
         int qos = 0;
 
