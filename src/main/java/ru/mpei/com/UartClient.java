@@ -21,7 +21,7 @@ public class UartClient {
 
         OutputStream outputStream = port.getOutputStream();
 
-        publishSample.Publish(port.getOutputStream().toString());
+//        publishSample.Publish(port.getOutputStream().toString());
 
         System.out.println("Successfully started UartClient");
 
